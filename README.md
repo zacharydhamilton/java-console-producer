@@ -1,4 +1,4 @@
-# Java Console Consumer
+# Java Console Producer
 
 ### **Things you'll need before getting started:**
 
@@ -10,13 +10,13 @@
 
 - Either build the image yourself using the provided `Dockerfile`, or reference the pre-built image `zachhamilton/console-producer`. This `README` will use the latter. 
 
-- Reference the following table to see the configuration parameters that can be passed to the consumer as environment variables.
+- Reference the following table to see the configuration parameters that can be passed to the producer as environment variables.
   
   | Environment Variable | Default Value        | Required? |
   |----------------------|----------------------|:---------:|
   | `TOPIC`              | n/a                  | Y         |
 
-- You'll need to volume mount the consumer container to the directory where `setup.properties` is found in order for the consumer to use the configuration.
+- You'll need to volume mount the producer container to the directory where `setup.properties` is found in order for the producer to use the configuration.
     ```bash
     ...
     -v $(pwd)/:/config/:ro
